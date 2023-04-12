@@ -1,4 +1,8 @@
 <script lang="ts">
+	const triggerClientError = async () => {
+		throw new Error('This is a client error');
+	};
+
 	const triggerServerError = async () => {
 		try {
 			await fetch('/');
@@ -11,11 +15,7 @@
 
 <div class="container">
 	<div>
-		<button
-			on:click={() => {
-				throw new Error('This is a client error');
-			}}>Throw Client Error</button
-		>
+		<button on:click={triggerClientError}>Throw Client Error</button>
 
 		<button on:click={triggerServerError}>Throw Server Error</button>
 	</div>
