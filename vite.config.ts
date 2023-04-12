@@ -1,6 +1,5 @@
-import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vitest/config';
 import { sentryVitePlugin } from '@sentry/vite-plugin';
+import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig, loadEnv } from 'vite';
 
 const config = defineConfig(({ mode }) => {
@@ -24,3 +23,5 @@ const config = defineConfig(({ mode }) => {
 		}
 	};
 });
+
+export default config;
