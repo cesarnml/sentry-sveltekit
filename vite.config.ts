@@ -6,6 +6,9 @@ const config = defineConfig(({ mode }) => {
 	const isProduction = mode === 'production';
 	const env = loadEnv(mode, process.cwd(), '');
 	return {
+		build: {
+			sourcemap: true
+		},
 		plugins: [
 			sveltekit(),
 			isProduction
