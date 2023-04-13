@@ -1,8 +1,17 @@
+<script>
+	import PageTransition from '../lib/components/PageTransition.svelte';
+	export let data;
+
+	$: ({ pathname } = data);
+</script>
+
 <nav>
 	<a href="/">Home</a>
 	<a href="/host/homes">Airbnb your home</a>
 </nav>
-<slot />
+<PageTransition {pathname}>
+	<slot />
+</PageTransition>
 
 <style>
 	nav {
