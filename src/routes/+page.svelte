@@ -16,7 +16,6 @@
 <div class="container">
 	<div>
 		<button on:click={triggerClientError}>Throw Client Error</button>
-
 		<button on:click={triggerServerError}>Throw Server Error</button>
 	</div>
 </div>
@@ -29,6 +28,17 @@
 		display: grid;
 		place-items: center;
 		height: 100vh;
-		background-color: darkslategrey;
+	}
+	button {
+		padding: 1rem 2rem;
+		border: none;
+		border-radius: 5px;
+		background-color: #000;
+		color: #fff;
+		font-size: 1.2rem;
+		cursor: pointer;
+	}
+	button:hover {
+		background-color: #333;
 	}
 </style>
